@@ -7,12 +7,17 @@
 int main(int argc, char *argv[]) {
 	
 	FILE* fp;
-	char str[100];
+	char c;
 	
-	fp =fopen("sample.txt","w");
-	printf("input a word:");
-	scanf("%s", str);
-	fprintf(fp, "%s", str);
+	fp =fopen("sample.txt","r");
+	if (fp == NULL){
+		printf("failed to open\n");
+		return 0;
+	}
+	
+	while((c=fgetc(fp))!=EOF){
+		putchar(c);
+	}
 	fclose(fp);
 	
 
