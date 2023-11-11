@@ -3,12 +3,9 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(void) {
-	char src[]="The Worst things to eat before you sleep";
-	char dst[100];
+int main(int argc, char *argv[]) {
+	char src[30] = "happy C programming";
+	
+	printf("문자열\"%s\"의 길이 : %i \n", src, strlen(src))	;
 
-	strcpy(dst, src);
-
-	printf("copied string: %s\n ", dst);
-	return 0;
 }
